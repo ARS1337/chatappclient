@@ -19,12 +19,13 @@ function Lister(props) {
         <ArrowUpwardIcon />
       </Button>
       {response.map((x, key) => {
+        console.log(x)
         return (
           <Container
             key={1}
             style={{
               display: "flex",
-              justifyContent: x.userName === userName ? "flex-end" : "flex-start",
+              justifyContent: x.user === userName ? "flex-end" : "flex-start",
             }}
           >
             <Paper
@@ -34,12 +35,12 @@ function Lister(props) {
                 root: classes.paperStyle,
               }}
               style={{
-                alignSelf: x.userName === userName ? "flex-end" : "flex-start",
-                backgroundColor: x.userName === userName ? "pink" : x.userName === "messageBot" ? "lightgrey" : "skyblue",
+                alignSelf: x.user === userName ? "flex-end" : "flex-start",
+                backgroundColor: x.user === userName ? "pink" : x.user === "messageBot" ? "lightgrey" : "skyblue",
               }}
             >
               <Box>
-                {x.userName + ":"}
+                {x.user + ": "}
                 <ListItemText
                   ref={tempRef}
                   primary={x.message || "' '"}

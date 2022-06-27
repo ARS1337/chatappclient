@@ -1,5 +1,5 @@
 const config = {
-    serverURL:"https://chatappserverpsql.herokuapp.com:3001",
+    serverURL:"http://192.168.0.102:3001",
     drawerWidth:240
 }
 

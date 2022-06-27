@@ -83,7 +83,7 @@ function ResponsiveDrawer(props) {
 
     socket.on("getUsersGroups", (data) => {
       if (data != null) {
-        setGroups(data.groups);
+        setGroups(data);
       } else {
         socket.emit("getUsersGroups", { user: userName });
       }
@@ -149,7 +149,7 @@ function ResponsiveDrawer(props) {
 
   const sendMessage = async () => {
     await socket.emit("chat", {
-      userName: userName,
+      user: userName,
       currGroup: currGroup,
       message: message,
     });

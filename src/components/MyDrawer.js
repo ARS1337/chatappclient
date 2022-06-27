@@ -31,8 +31,7 @@ function MyDrawer(props) {
           </ListItem>
           <Divider />
           <Divider />
-          {groups.map((x) => {
-            console.log('x is ',x && x.includes(',')?(x.split(',').filter(x=>x!=userName)):x)
+          {groups && groups.map((x) => {
             return (
               <>
                 <Divider />
